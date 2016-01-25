@@ -1,10 +1,10 @@
 import React from 'react';
 import { browserHistory,Router, Route, IndexRoute, Redirect} from 'react-router'
-import App from "./components/App";
-import Home from "./components/Home";
-import About from "./components/About";
-import Author from "./components/Author";
-import NoMatch from "./components/NoMatch";
+import App from "./components/App.jsx";
+import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
+import Author from "./components/Author.jsx";
+import NoMatch from "./components/NoMatch.jsx";
 
 function requireAuth(nextState, replace) {
   console.log("%s",  nextState.location.pathname);

@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import AuthorApi from "../api/authorApi";
-import AuthorList from "./AuthorList";
+import AuthorApi from "../api/authorApi.jsx";
+import AuthorList from "./AuthorList.jsx";
 
 export default class Author extends React.Component {
   constructor(props) {

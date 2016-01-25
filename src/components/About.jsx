@@ -16,6 +16,7 @@ export default class About extends React.Component {
               <li>Flux</li>
               <li>Node</li>
               <li>Gulp</li>
+              <li>Reactify</li>
               <li>Babelify</li>
               <li>Browserify</li>
             </ul>

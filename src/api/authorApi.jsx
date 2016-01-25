@@ -1,5 +1,5 @@
 import _ from "lodash";
-import mockData from './mockData';
+import mockData from './mockData.jsx';
 
 export default class AuthorApi {
   constructor() {

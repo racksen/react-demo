@@ -13,7 +13,7 @@ export default class Header extends React.Component {
             &#9776;
           </button>
           <div className="collapse navbar-toggleable-xs" id="navbar-header">
-            <a className="navbar-brand" href="#"><img src='images/logo.png' width="180px" height="50px"/></a>
+            <a className="navbar-brand" href="#"><i className="fa fa-user-secret fa-2x"></i></a>
             <ul className="nav navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Header from "./Header";
+import Header from "./Header.jsx";
 
 // import Home from "./Home";
 // import About from "./About";
