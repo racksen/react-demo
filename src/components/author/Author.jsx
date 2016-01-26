@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
-import AuthorApi from "../api/authorApi.jsx";
+import { Router, Route, Link } from 'react-router'
+
+import AuthorApi from "../../api/authorApi.jsx";
 import AuthorList from "./AuthorList.jsx";
 
 export default class Author extends React.Component {
@@ -14,7 +16,7 @@ export default class Author extends React.Component {
   }
 
   componentWillMount() {
-    let authors = (new AuthorApi()).getAll();
+    let authors = AuthorApi.getAllAuthors();
     this.setState({authors : authors});
   }
 
@@ -23,6 +25,8 @@ export default class Author extends React.Component {
     return (
       <div>
         <h1>Author</h1>
+        <Link to="author/create" className='btn btn-primary pull-right'>Create</Link>
+        <br/><br/>
         <AuthorList authors={this.state.authors}/>
       </div>
     );
