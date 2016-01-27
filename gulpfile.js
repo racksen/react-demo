@@ -13,7 +13,7 @@ var config = {
 	port: 9005,
 	devBaseUrl: 'http://localhost',
 	paths: {
-		html: './src/*.html',
+		html: ['./src/*.html','./*.html'],
 		js: ['./src/**/*.jsx','./src/**/*.js'],
 		css: [
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
@@ -28,7 +28,7 @@ var config = {
 //Start a local development server
 gulp.task('connect', function() {
 	connect.server({
-		root: ['dist'],
+		root: ['.'],
 		port: config.port,
 		base: config.devBaseUrl,
 		livereload: true
@@ -36,7 +36,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('open', ['connect'], function() {
-	gulp.src('dist/index.html')
+	gulp.src('index.html')
 		.pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
 
@@ -83,4 +83,4 @@ gulp.task('watch', function() {
 	gulp.watch(config.paths.js, ['build', 'lint']);
 });
 
-gulp.task('default', ['html', 'build', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['html',  'css', 'lint', 'build', 'open', 'watch']);

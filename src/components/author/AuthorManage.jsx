@@ -21,9 +21,8 @@ export default class AuthorManage extends React.Component {
 
   saveAuthor(event){
     event.preventDefault();
-    event.stopPropagation();
     AuthorApi.saveAuthor(this.state.author);
-    console.log(AuthorApi.getAllAuthors());
+    //console.log(AuthorApi.getAllAuthors());
   }
 
   render() {

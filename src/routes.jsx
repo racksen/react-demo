@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { browserHistory,Router, Route, IndexRoute, Redirect} from 'react-router'
 import App from "./components/App.jsx";
 import NoMatch from "./components/NoMatch.jsx";
@@ -18,7 +19,7 @@ function requireAuth(nextState, replace) {
   // }
 }
 
-React.render((
+ReactDOM.render((
   <Router>
     <Route path="/" component={App}>
       <Redirect from="about1" to='about' />

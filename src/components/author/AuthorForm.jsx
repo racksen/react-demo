@@ -9,23 +9,22 @@ export default class AuthorForm extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>{this.props.action} Author</h2>
-        <form>
-
-          <TextInput
-            name="FNAME"
-            label="First Name"
-            value={this.props.author.FNAME}
-            onChange = {this.props.onChange} />
-
-          <TextInput
-              name="LNAME"
-              label="Last Name"
-              value={this.props.author.LNAME}
+          <h2>{this.props.action} Author</h2>
+          <form>
+            <TextInput
+              name="FNAME"
+              label="First Name"
+              value={this.props.author.FNAME}
               onChange = {this.props.onChange} />
 
-            <button className="btn btn-primary" onclick={this.props.onSave}>Save</button>
-        </form>
+            <TextInput
+                name="LNAME"
+                label="Last Name"
+                value={this.props.author.LNAME}
+                onChange = {this.props.onChange} />
+
+              <button className="btn btn-primary" onClick={this.props.onSave}>Save</button>
+            </form>
         </div>
     );
   }
