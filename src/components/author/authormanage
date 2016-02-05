@@ -1,0 +1,63 @@
+class AuthorManage extends React.Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       author : {ID: '', FNAME: '', LNAME: ''},
+//       action : 'Create',
+//       errors : {}
+//     };
+//   }
+//
+//   authorFormIsValid(){
+//     let formIsValid= true;
+//     this.state.errors ={};
+//
+//     if(this.state.author.FNAME.length<3){
+//       this.state.errors.FNAME = "First name must be at least 3 characters.";
+//       formIsValid=false
+//     }
+//     if(this.state.author.LNAME.length<3){
+//       this.state.errors.LNAME = "Last name must be at least 3 characters.";
+//       formIsValid=false
+//     }
+//     this.setState({errors: this.state.errors});
+//     return formIsValid;
+//   }
+//
+//   setAuthorState(event){
+//     var field= event.target.name;
+//     var value= event.target.value;
+//     this.state.author[field]=value;
+//     return this.setState({author : this.state.author});
+//   }
+//
+//   saveAuthor(event){
+//     event.preventDefault();
+//     if(!this.authorFormIsValid()){
+//       return;
+//     }
+//
+//     AuthorApi.saveAuthor(this.state.author);
+//     toastr.success('Author Saved', 'Demo Admin');
+//     browserHistory.push('/author');
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//
+//         <AuthorForm
+//           action = {this.state.action}
+//           author = {this.state.author}
+//           onChange={this.setAuthorState.bind(this)}
+//           onSave = {this.saveAuthor.bind(this)}
+//           errors = {this.state.errors}/>
+//
+//     </div>
+//     );
+//   }
+// }
+//
+// AuthorManage.propTypes = {
+// };
