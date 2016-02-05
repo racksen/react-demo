@@ -15,13 +15,15 @@ export default class AuthorForm extends React.Component {
               name="FNAME"
               label="First Name"
               value={this.props.author.FNAME}
-              onChange = {this.props.onChange} />
+              onChange = {this.props.onChange}
+              error = {this.props.errors.FNAME}/>
 
             <TextInput
                 name="LNAME"
                 label="Last Name"
                 value={this.props.author.LNAME}
-                onChange = {this.props.onChange} />
+                onChange = {this.props.onChange}
+                error = {this.props.errors.LNAME}/>
 
               <button className="btn btn-primary" onClick={this.props.onSave}>Save</button>
             </form>
@@ -31,4 +33,8 @@ export default class AuthorForm extends React.Component {
 }
 
 AuthorForm.propTypes = {
+  author : React.PropTypes.object.isRequired,
+  onChange : React.PropTypes.func.isRequired,
+  onSave : React.PropTypes.func.isRequired,
+  errors : React.PropTypes.object
 };

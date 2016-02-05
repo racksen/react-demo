@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
 import Header from "./common/Header.jsx";
-
 // import Home from "./Home";
 // import About from "./About";
 // import Author from "./Author";
+
 
 export default class App extends React.Component {
   constructor(props) {

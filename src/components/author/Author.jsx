@@ -1,23 +1,29 @@
 import React, {PropTypes} from 'react';
 import { Router, Route, Link } from 'react-router'
 
-import AuthorApi from "../../api/authorApi.jsx";
+//import AuthorApi from "../../api/authorApi.jsx";
 import AuthorList from "./AuthorList.jsx";
+import AuthorStore from "../../stores/authorStore";
 
 export default class Author extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  getInitialState(){
-    return {
-      authors:[]
+    this.state = {
+      authors : AuthorStore.getAllAuthors()
     };
   }
 
-  componentWillMount() {
-    let authors = AuthorApi.getAllAuthors();
-    this.setState({authors : authors});
+  componentWillMount(){
+    AuthorStore.addChangeListener(this._onChange.bind(this));
+  }
+
+  componentWillUnMount(){
+    AuthorStore.removeChangeListener(this._onChange.bind(this));
+
+  }
+
+  _onChange(){
+    this.setState({authors :  AuthorStore.getAllAuthors()})
   }
 
   render() {
@@ -25,7 +31,7 @@ export default class Author extends React.Component {
     return (
       <div>
         <h1>Author</h1>
-        <Link to="author/create" className='btn btn-primary pull-right'>Create</Link>
+        <Link to="author/manage" className='btn btn-primary pull-right'>Create</Link>
         <br/><br/>
         <AuthorList authors={this.state.authors}/>
       </div>
